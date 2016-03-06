@@ -1,0 +1,17 @@
+<ion-view title="收入明细">
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="income in incomeDetail.list">
+                <div class="fl">
+                    <span ng-bind="income.create_time  | date:'yyyy-MM-dd HH:mm' "></span>
+                </div>
+                <img src="img/income.png" alt="" class="fl incomeIcon"/>
+
+                <div class="fl incomeBill">
+                    <span ng-bind="income.d_money"></span>
+                </div>
+            </ion-item>
+            <p class="showList" ng-show="incomeDetail.showUnList">暂无记录</p>
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,26 @@
+<ion-view title="开通" style="color:#ffffff">
+    <ion-nav-bar style="background: #54CE93;">
+        <ion-nav-buttons side="right">
+            <span class="headTxt" ng-click="cancelCk()">取消</span>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content>
+        <div>
+            <p class="icon ion-ios-close-empty"></p>
+        </div>
+        <div class="dredge">
+            <img src="img/dredge.png" alt=""/>
+        </div>
+        <div class="join">
+            <p>有8000人等待您的加入</p>
+        </div>
+        <div class="joinMain" ng-repeat="data in dataList">
+            <dl>
+                <dt class="fl"><img src="img/defHeadLogo.jpg" alt=""/></dt>
+                <dd class="fl"><span ng-bind="data.user_name"></span><em>今日赚取<span
+                        ng-bind="data.month_money"></span></span>元</em></dd>
+            </dl>
+        </div>
+        <button class="loginBtns" ng-click="openCk()">开通</button>
+    </ion-content>
+</ion-view>

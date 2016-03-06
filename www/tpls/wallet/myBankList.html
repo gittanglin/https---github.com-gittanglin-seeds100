@@ -1,0 +1,20 @@
+<ion-view title="我的银行卡" style="color: #ffffff;">
+    <ion-nav-bar style="background: #54CE93;">
+        <ion-nav-back-button class="button-clear" ng-click="goBack()">
+            <i class="ion-chevron-left"></i>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-buttons side="right">
+        <span class="headTxt" ng-show="bank.showAdd"  ng-click="addBank()">添加</span>
+    </ion-nav-buttons>
+    <ion-content>
+        <dl class="bankCardB" ng-click="bankDetail({{bank.id}})" ng-repeat="bank in bankList">
+            <!--<dt class="fl"><img src="{{bank.bankImg}}" alt=""/></dt>-->
+            <dd class="fl">
+                <p class="information1"><span ng-bind="bank.bankName"></span></p>
+                <!--<p class="information2">信用卡</p>-->
+                <p class="information3"><span ng-bind="bank.bankCardNo"></span></p>
+            </dd>
+        </dl>
+    </ion-content>
+</ion-view>

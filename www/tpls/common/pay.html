@@ -1,0 +1,18 @@
+<ion-view>
+    <ion-nav-bar style="background: #54CE93;" >
+        <ion-nav-back-button class="button-clear" style="display: none">
+            <i class="ion-chevron-left"></i>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content>
+         <dl class="payTop">
+             <dt><img src="img/payT.png" alt=""/></dt>
+             <dd>请选择支付方法</dd>
+         </dl>
+        <div class="pay">
+        <div class="fl" style="margin-bottom: 20px;"><img src="img/alipay.png" alt="" ng-click="pay('alipay')"/></div>
+        <div class="fr"><img src="img/weiPay.png" alt="" ng-click="pay('weiPay')"/></div>
+        </div>
+        <button class="loginBtns" id="yellow" ng-click="cancelCk()">取消</button>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,12 @@
+<ion-view title="资讯详情">
+    <ion-content>
+        <p class="fontW" ng-bind="detail.title"></p>
+
+        <p class="address">发布时间:&nbsp<em ng-bind="detail.create_time | date:'yyyy-MM-dd'"></em></p>
+
+        <div class="show width_90" ng-if="detail.img_url!=''"><img src="{{detail.img_url}}" alt=""/></div>
+
+        <p class="main" ng-bind="detail.content"></p>
+        <!--<p class="hote">【热词】<em>政治规矩</em></p>-->
+    </ion-content>
+</ion-view>

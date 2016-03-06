@@ -1,0 +1,20 @@
+<ion-view title="资讯">
+    <ion-content>
+        <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+        <marquee  ng-bind="showInfo"></marquee>
+        <div class="show"><img src="img/tu.jpg" alt=""/></div>
+        <ul class="showBox">
+            <li ng-repeat="info in infoList" ng-click="detail(info)">
+                <dl class="showMain">
+                    <dt class="fl">
+                        <span ng-bind="info.title"></span>
+                    <p>发布时间:&nbsp<em ng-bind=" info.create_time | date:'yyyy-MM-dd'"></em></p>
+                    </dt>
+
+                    <dd class="fl" ng-if="info.img_url!=''"><img src="{{info.img_url}}" alt=""
+                                                                 style="width: 80px;height: 60px;"/></dd>
+                </dl>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>

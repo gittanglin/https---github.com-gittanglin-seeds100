@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="seedsApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
+    <link href="css/financial.css" rel="stylesheet">
+</head>
+<body ng-controller="seedsAppCtrl">
+<ion-nav-bar class="bar-positive">
+    <ion-nav-back-button class="button-clear" ng-click="goBack()">
+        <i class="ion-chevron-left"></i>
+    </ion-nav-back-button>
+</ion-nav-bar>
+<ion-nav-view></ion-nav-view>
+<script type="text/javascript" src="cordova.js"></script>
+<script src="lib/ionic/js/ionic.bundle.min.js"></script>
+<script src="lib/ngIOS9UIWebViewPatch.js"></script>
+<script src="js/route/mainR.js"></script>
+<script src="js/utils/config.js"></script>
+<script src="js/utils/util.js"></script>
+<script src="js/controller/mainCtrl.js"></script>
+</body>
+</html>

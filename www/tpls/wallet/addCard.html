@@ -1,0 +1,13 @@
+<ion-view title="添加银行卡信息">
+    <ion-content>
+        <ul class="registerList">
+            <li><span class="fl">银行</span>
+                <select class="fl" ng-model="bankCard.bankCode" ng-options="bankCard.bankCode as bankCard.bankName for bankCard in bankList">
+                    <option value="">请选择</option>
+                </select>
+            </li>
+            <li><span class="fl">开户行</span><input type="text" class="fl" placeholder="请输入开户行" ng-model="bankCard.openBank"/></li>
+        </ul>
+        <button class="loginBtns marginT20" ng-click="saveBank()">确认</button>
+    </ion-content>
+</ion-view>

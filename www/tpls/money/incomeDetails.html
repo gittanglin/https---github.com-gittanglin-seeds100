@@ -1,0 +1,12 @@
+<ion-view title="收入明细">
+    <ion-content>
+        <ion-list>
+            <ion-item class="item-icon-right" ng-repeat="item in incomeDetail.list">
+                {{item.create_time | date : 'yyyy/MM/dd HH:mm:ss'}}:{{item.d_money}}元
+            </ion-item>
+        </ion-list>
+        <div ng-show="incomeDetail.count<=0" class="incomeDetailsNo">
+            <p>暂无收账记录</p>
+        </div>
+    </ion-content>
+</ion-view>

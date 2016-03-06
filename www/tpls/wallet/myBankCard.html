@@ -1,0 +1,51 @@
+<ion-view title="我的银行卡">
+    <ion-nav-bar style="background: #54CE93;">
+        <ion-nav-back-button class="button-clear">
+            <i class="ion-chevron-left"></i>
+        </ion-nav-back-button>
+        <ion-nav-buttons side="right">
+            <span class="headTxt" ng-click="eidtBank()">编辑</span>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content>
+        <div id="show">
+            <ul class="registerList">
+                <li><span class="fl width55">持卡人</span><input type="text" class="fl textCenter" readonly
+                                                              style="background-color: #ffffff;"
+                                                              ng-model="bankCard.userName"/></li>
+                <li><span class="fl width55">银行</span>
+                    <select ng-model="bankCard.bankCode" disabled style="background-color: #ffffff;"
+                            ng-options="bankCard.bankCode as bankCard.bankName for bankCard in bankList">
+                        <option value="">请选择</option>
+                    </select>
+                </li>
+                <li><span class="fl width55">开户行</span><input type="text" class="textCenter" readonly
+                                                              style="background-color: #ffffff;" class="fl"
+                                                              ng-model="bankCard.openBank"/></li>
+                <li><span class="fl width55">卡号</span><input type="text" class="textCenter" readonly
+                                                             style="background-color: #ffffff;" class="fl"
+                                                             ng-model="bankCard.bankCardNo"/></li>
+            </ul>
+        </div>
+        <div id="edit" style="display: none">
+            <ul class="registerList">
+                <li><span class="fl width55">持卡人</span><input type="text" readonly class="fl textCenter"
+                                                              style="background-color: #ffffff;"
+                                                              ng-model="bankCard.userName"/></li>
+                <li><span class="fl width55">银行</span>
+                    <select ng-model="bankCard.bankCode" style="background-color: #ffffff;"
+                            ng-options="bankCard.bankCode as bankCard.bankName for bankCard in bankList">
+                        <option value="">请选择</option>
+                    </select>
+                </li>
+                <li><span class="fl width55">开户行</span><input type="text" class="textCenter"
+                                                              style="background-color: #ffffff;" class="fl"
+                                                              ng-model="bankCard.openBank"/></li>
+                <li><span class="fl width55">卡号</span><input type="text" class="textCenter"
+                                                             style="background-color: #ffffff;" class="fl"
+                                                             ng-model="bankCard.bankCardNo"/></li>
+            </ul>
+            <button class="loginBtns marginT20" ng-click="updateBank()">确认修改</button>
+        </div>
+    </ion-content>
+</ion-view>

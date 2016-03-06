@@ -1,0 +1,41 @@
+<ion-view title="注册" >
+    <ion-nav-bar>
+        <ion-nav-back-button class="button-clear" ng-click="goBack()">
+            <i class="ion-chevron-left"></i>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content>
+        <ul class="registerList">
+            <li>
+                <span class="fl">介绍人编码</span>
+                <input type="text" class=" textCenter center" ng-model="register.pId"
+                                                    placeholder="请输入介绍人编码"/></li>
+            <li>
+                <span class="fl">真实姓名</span>
+                <input type="text" class=" textCenter center" ng-model="register.username"
+                                                  placeholder="注:真实姓名不可修改"/></li>
+            <li>
+                <span class="fl">密码</span>
+                <input type="password" class=" textCenter center" ng-model="register.pwd"
+                                                 placeholder="6-12位数字字母组合"/></li>
+            <li>
+                <span class="fl">确认密码</span>
+                <input type="password" id="vpwd" class=" textCenter center" ng-model="register.repwd"
+                                                   placeholder="6-12位数字字母组合"  /></li>
+        </ul>
+        <div class="identification">
+            <input type="text" ng-model="register.phone" placeholder="请输入手机号" class="ident"/>
+
+            <p ng-click="getVCode()" ng-show="register.showVCode" style="background-color: #54CE93; ">获取验证码</p>
+
+            <p ng-show="register.showReVCode"  style="background-color: gray;"><span ng-bind="minuteTxt"></span></p>
+        </div>
+        <div class="identification" style="margin-top: 10px !important;">
+            <input type="text" ng-model="register.vCode" placeholder="请输入验证码" class="width_100"/>
+        </div>
+        <div class="reading">
+            <img src="img/check.png" alt=""/>我已同意<em>《用户注册协议》</em>
+        </div>
+        <button class="loginBtns" ng-click="registerBtn()">注册</button>
+    </ion-content>
+</ion-view>

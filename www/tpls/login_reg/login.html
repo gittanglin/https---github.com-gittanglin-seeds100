@@ -1,0 +1,18 @@
+<div class="loginB" style="background: url(img/loginB.png) no-repeat; background-size: 100% 100%">
+    <div>
+        <img src="img/seedsT.png" alt=""/>
+    </div>
+    <dl class="login">
+        <dt class="fl"><img src="img/phone.png" alt=""/></dt>
+        <dd class="fl"><input type="text" placeholder="请输入您的手机号码" ng-model="login.phone"/></dd>
+    </dl>
+    <dl class="login">
+        <dt class="fl"><img src="img/password.png" alt=""/></dt>
+        <dd class="fl"><input type="password" placeholder="请输入您的密码" ng-model="login.pwd"/></dd>
+    </dl>
+    <button class="loginBtn button " style="width: 80%;border-radius: 5px;margin-left: 10%;" ng-click="loginBtn()">登录</button>
+    <ul class="reminder">
+        <li ng-click="register()">注册账号</li>
+        <li ng-click="forgetPass()">忘记密码</li>
+    </ul>
+</div>

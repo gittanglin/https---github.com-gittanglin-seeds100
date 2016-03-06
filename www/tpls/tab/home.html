@@ -1,0 +1,26 @@
+<ion-view title="主页">
+
+    <ion-content>
+        <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+        <marquee  ng-bind="showInfo"></marquee>
+        <div class="setting" ng-click="settings()">
+            <img src="img/settings.png" alt=""/>
+        </div>
+        <dl class="homeP">
+            <dt><img src="img/defHeadLogo.jpg" alt=""/></dt>
+            <dd>
+                <p ng-bind="userAccount.user_name"></p>
+                <span>我的邀请码：<span ng-bind="userAccount.id"></span></span>
+            </dd>
+            <p class="addMoney" ng-if="userAccount.account_status==1">是否完成本月100元充值:
+                <span >✅</span>
+                <!--<span ng-if="userAccount.account_status==0">❌</span>-->
+            </p>
+        </dl>
+        <dl class="balance">
+            <dt  style="margin: 0 auto;"><img src="img/diamond.png" alt=""/></dt>
+            <dd style="text-align: center">本期新增：<span ng-bind="userAccount.thisMonthMoney"></span></dd>
+        </dl>
+        <button class="loginBtns marginT20" ng-if="userAccount.account_status==0" ng-click="payMonth()">本月任务充值</button>
+    </ion-content>
+</ion-view>
